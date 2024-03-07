@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlightSystem.Views.DisplayFlight"
+             xmlns:model="clr-namespace:FlightSystem.Models"
+             Title="Display Flight">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button Text="Back to Search" HorizontalOptions="FillAndExpand" Margin="20" BackgroundColor="DarkMagenta" Clicked="OnBackClicked"/>
+            
+            <CollectionView x:Name="flightCollection">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="DarkMagenta" CornerRadius="5" Padding="15" Margin="20">
+                            <Grid ColumnDefinitions=".40*, .35*, .25*" RowDefinitions="50, 35">
+                                <Label Text="{Binding FlightCode}" FontSize="Large" Grid.Column="0" Grid.Row="0" FontAttributes="Bold"/>
+                                <Label Text="{Binding Airline}" FontSize="Medium" Grid.Column="0" Grid.Row="1"/>
+
+                                <Label Text="{Binding Time}" FontSize="Large" Grid.Column="1" Grid.Row="0"/>
+                                <Label Grid.Column="1" Grid.Row="1" FontSize="Medium">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} - {1}">
+                                            <Binding Path="DepartureCity"/>
+                                            <Binding Path="ArrivalCity"/>
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+
+                                <Label Text="{Binding Cost, StringFormat='CA$ {0}'}" FontSize="Medium" Grid.Column="2" Grid.RowSpan="2" VerticalOptions="Center"/>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
