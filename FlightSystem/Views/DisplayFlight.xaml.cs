@@ -16,4 +16,15 @@ public partial class DisplayFlight : ContentPage
     {
         Shell.Current.GoToAsync("..");
     }
+
+    private void OnItemSelected (object sender, SelectionChangedEventArgs e)
+    {
+        if (flightCollection.SelectedItem != null)
+        {
+            Flight flight = e.CurrentSelection.FirstOrDefault() as Flight;
+
+            var navigationParameter = new ShellNavigationQueryParameters { { "flight", flight } };
+            Shell.Current.GoToAsync(nameof(Reserve), navigationParameter);
+        }
+    }
 }

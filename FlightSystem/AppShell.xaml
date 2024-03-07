@@ -23,12 +23,6 @@
             Icon="flight.png"/>  
 
         <ShellContent
-            Title="Reserve Flight"
-            ContentTemplate="{DataTemplate views:Reserve}"
-            Route="Reserve" 
-            Icon="ticket.png"/>
-        
-        <ShellContent
             Title="About Us"
             ContentTemplate="{DataTemplate views:AboutUs}"
             Route="AboutUs" 

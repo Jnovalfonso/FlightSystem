@@ -6,13 +6,19 @@
              Title="Display Flight">
     <ScrollView>
         <VerticalStackLayout>
-            <Button Text="Back to Search" HorizontalOptions="FillAndExpand" Margin="20" BackgroundColor="DarkMagenta" Clicked="OnBackClicked"/>
-            
-            <CollectionView x:Name="flightCollection">
+            <Button Text="Back to Search" HorizontalOptions="FillAndExpand" Margin="20" FontAttributes="Bold" BackgroundColor="Magenta" Clicked="OnBackClicked"/>
+
+            <CollectionView x:Name="flightCollection" 
+                            SelectedItem="OnItemSelected"
+                            SelectionMode="Single"
+                            SelectionChanged="OnItemSelected">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BorderColor="DarkMagenta" CornerRadius="5" Padding="15" Margin="20">
-                            <Grid ColumnDefinitions=".40*, .35*, .25*" RowDefinitions="50, 35">
+                        <Frame BorderColor="DarkMagenta" 
+                               CornerRadius="5" 
+                               Padding="15" 
+                               Margin="20">
+                            <Grid ColumnDefinitions=".40*, .25*, .25*, .10*" RowDefinitions="50, 35">
                                 <Label Text="{Binding FlightCode}" FontSize="Large" Grid.Column="0" Grid.Row="0" FontAttributes="Bold"/>
                                 <Label Text="{Binding Airline}" FontSize="Medium" Grid.Column="0" Grid.Row="1"/>
 
