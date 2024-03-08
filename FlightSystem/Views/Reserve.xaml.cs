@@ -35,4 +35,9 @@ public partial class Reserve : ContentPage
             return _selectedFlight;
         }
     }
+
+    private void OnSumbitClicked(object sender, EventArgs e)
+    {
+        
+    }
 }

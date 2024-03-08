@@ -9,6 +9,7 @@ public partial class DisplayFlight : ContentPage
 	public DisplayFlight()
 	{
 		InitializeComponent();
+        flightsFoundLabel.Text = $"Flights Found: {FlightRepository.Count}";
         flightCollection.ItemsSource = FlightRepository.FoundFlights;
     }
 

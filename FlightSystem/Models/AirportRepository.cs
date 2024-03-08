@@ -9,6 +9,7 @@ namespace FlightSystem.Models
     public static class AirportRepository
     {
         public const string AirportsTextFile = "C:\\Users\\asus\\OneDrive\\Documents\\SAIT\\6. Object-Oriented Programming II\\C#\\Assignments\\FlightSystem\\FlightSystem\\Resources\\Raw\\airports.txt";
+        //static string Path = Path.Combine(Environment.CurrentDirectory, @"Raw\", AirportsTextFile);
 
         private static Dictionary<string,string> _airportDictionary;
         private static int _count;

@@ -26,7 +26,6 @@ namespace FlightSystem.Models
                 _flights = new List<Flight>();
                 _foundFlights = new List<Flight>();
                 FillFlightList();
-                _count = _flights.Count;
             }
         }
 
@@ -41,7 +40,7 @@ namespace FlightSystem.Models
             
             if (isDepartureEmpty && isArrivalEmpty && isDayEmpty )
             {
-                FoundFlights = Flights;
+                FoundFlights = Flights; // TODO
             }
 
             else
@@ -59,6 +58,7 @@ namespace FlightSystem.Models
                 }
             }
             
+            Count = _foundFlights.Count;
         }
         
 

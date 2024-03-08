@@ -8,6 +8,8 @@
         <VerticalStackLayout>
             <Button Text="Back to Search" HorizontalOptions="FillAndExpand" Margin="20" FontAttributes="Bold" BackgroundColor="Magenta" Clicked="OnBackClicked"/>
 
+            <Label x:Name="flightsFoundLabel" Margin="20" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center"/>
+
             <CollectionView x:Name="flightCollection" 
                             SelectedItem="OnItemSelected"
                             SelectionMode="Single"
