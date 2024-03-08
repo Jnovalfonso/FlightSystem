@@ -3,6 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlightSystem.Views.AboutUs"
              Title="About Us">
+private void AboutUsForm_Load(object sender, EventArgs e)
+    // Read the content from the text file
+    string aboutUsContent = File.ReadAllText("about_us.txt");
+
+    // Set the content in the rich text box control
+    rtbAboutUs.Text = aboutUsContent;
     <VerticalStackLayout>
         <Label 
             Text="Welcome to .NET MAUI!"
