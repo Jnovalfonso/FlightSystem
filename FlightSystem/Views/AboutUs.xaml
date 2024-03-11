@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FlightSystem.Views.AboutUs"
-             Title="About Us">
-private void AboutUsForm_Load(object sender, EventArgs e)
-    // Read the content from the text file
-    string aboutUsContent = File.ReadAllText("about_us.txt");
-
-    // Set the content in the rich text box control
-    rtbAboutUs.Text = aboutUsContent;
+             x:Class="FlightApp.Views.AboutUsPage"
+             Title="AboutUsPage">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Padding="21" Text="Welcome This is a application that run on" FontSize="Header" FontAttributes="Bold" />
+        <Label 
+             Padding="21" Text="Android" FontSize="Large" />
+        <Label 
+             Padding="21" Text="IOS" FontSize="Large"/>
+        <Label 
+             Padding="21" Text="Windows" FontSize="Large" />
+
+        <Border Background="SaddleBrown"></Border>
+
+        <Label FontSize="Large" Margin="21" Text="WHAT WE STAND FOR " FontAttributes="Bold"></Label>
+        <Label Padding="21"   FontSize="Large" Text="Introducing a new application, your all-in-one travel companion that simplifies the journey from planning to touchdown. Whether you're a frequent flyer or a spontaneous explorer, FlyFinder ensures a seamless experience in finding flights and making reservations, making your travel dreams take flight."> </Label>
+
+        <Button x:Name="Reuturn_back_from_about_us_page" Text="Back" WidthRequest="400" Clicked="Reuturn_back_from_about_us_page_Clicked" FontFamily="" Background="Orangered" ></Button>
     </VerticalStackLayout>
+    
 </ContentPage>
