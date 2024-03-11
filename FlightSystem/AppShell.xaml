@@ -23,6 +23,12 @@
             Icon="flight.png"/>  
 
         <ShellContent
+            Title="Find Reservations"
+            ContentTemplate="{DataTemplate views:FindReservation}"
+            Route="FindReservation" 
+            Icon="ticket.png"/>
+        
+        <ShellContent
             Title="About Us"
             ContentTemplate="{DataTemplate views:AboutUs}"
             Route="AboutUs" 

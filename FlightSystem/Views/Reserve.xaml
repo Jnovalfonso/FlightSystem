@@ -49,12 +49,19 @@
 
                 <Entry x:Name="name" Grid.Column="1" Grid.Row="0" Margin="5"/>
                 <Entry x:Name="citizenship" Grid.Column="1" Grid.Row="1" Margin="5"/>
-                <Entry x:Name="status" Grid.Column="1" Grid.Row="2" Margin="5"/>
+                <Picker x:Name="status"  Grid.Column="1" Grid.Row="2" Margin="5">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Active</x:String>
+                            <x:String>Inactive</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
             </Grid>
         </HorizontalStackLayout>
         <HorizontalStackLayout HorizontalOptions="Center">
-            <Button Text="Back to Flights" BackgroundColor="Red" Margin="20"/>
-            <Button Text="Reserve Seat" Margin="20"/>
+            <Button Text="Back to Flights" BackgroundColor="Red" Margin="20" Clicked="OnBackClicked"/>
+            <Button Text="Reserve Seat" Margin="20" Clicked="OnSumbitClicked"/>
         </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>

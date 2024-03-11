@@ -17,10 +17,11 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame BorderColor="DarkMagenta" 
+                               BackgroundColor="Transparent"
                                CornerRadius="5" 
                                Padding="15" 
                                Margin="20">
-                            <Grid ColumnDefinitions=".40*, .25*, .25*, .10*" RowDefinitions="50, 35">
+                            <Grid ColumnDefinitions=".40*, .25*, .25*, .10*" RowDefinitions="50, 35" BackgroundColor="Transparent">
                                 <Label Text="{Binding FlightCode}" FontSize="Large" Grid.Column="0" Grid.Row="0" FontAttributes="Bold"/>
                                 <Label Text="{Binding Airline}" FontSize="Medium" Grid.Column="0" Grid.Row="1"/>
 

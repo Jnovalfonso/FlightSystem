@@ -9,7 +9,16 @@ public partial class FindFlight : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnSubmitClicked(object sender, EventArgs e)
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+
+		arrivalEntry.Text = string.Empty;
+		departureEntry.Text = string.Empty;
+		dayEntry.Text = string.Empty;	
+    }
+
+    private void OnSubmitClicked(object sender, EventArgs e)
 	{
 		FlightRepository.SearchFlight(departureEntry.Text, arrivalEntry.Text, dayEntry.Text);
 		

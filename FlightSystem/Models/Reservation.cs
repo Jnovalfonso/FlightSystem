@@ -23,9 +23,13 @@ namespace FlightSystem.Models
             ReservedFlight = reservedFlight;
         }
 
-        public Reservation()
+        public Reservation(string reservationCode, string name, string citizenship, bool isActive, Flight reservedFlight)
         {
-            
+            ReservationCode = reservationCode;
+            Name = name;
+            Citizenship = citizenship;
+            IsActive = isActive;
+            ReservedFlight = reservedFlight;
         }
     }
 

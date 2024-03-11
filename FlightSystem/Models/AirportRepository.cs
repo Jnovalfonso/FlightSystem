@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +10,6 @@ namespace FlightSystem.Models
 {
     public static class AirportRepository
     {
-        public const string AirportsTextFile = "C:\\Users\\asus\\OneDrive\\Documents\\SAIT\\6. Object-Oriented Programming II\\C#\\Assignments\\FlightSystem\\FlightSystem\\Resources\\Raw\\airports.txt";
-        //static string Path = Path.Combine(Environment.CurrentDirectory, @"Raw\", AirportsTextFile);
-
         private static Dictionary<string,string> _airportDictionary;
         private static int _count;
         public static Dictionary<string ,string> AirportDictionary { get {  return _airportDictionary; } set { _airportDictionary = value; } }
@@ -21,7 +20,7 @@ namespace FlightSystem.Models
             if (_airportDictionary == null)
             {
                 _airportDictionary = new Dictionary<string, string>();
-                FillAirportDictionary();
+                 LoadAirportFile();
                 _count = _airportDictionary.Count;
             }
         }
@@ -39,24 +38,28 @@ namespace FlightSystem.Models
             return airportName;
         }
 
-        public static void FillAirportDictionary()
+
+        static async void LoadAirportFile()
         {
+            using Stream stream = await FileSystem.OpenAppPackageFileAsync("airports.txt");
+            using StreamReader reader = new StreamReader(stream);
+
+            string line;
+            Airport airport = new Airport();
+
+
             try
             {
-                string line;
-                Airport airport = new Airport();
-
-                using StreamReader reader = new StreamReader(AirportsTextFile);
                 while ((line = reader.ReadLine()) != null)
                 {
                     airport = CreateAirportInstance(line);
                     _airportDictionary.Add(airport.AirportCode, airport.AirportName);
                 }
-            }
+            }   
 
             catch (Exception ex)
             {
-                _count = -1;
+                Debug.WriteLine(ex);
             }
         }
 

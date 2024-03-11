@@ -1,5 +1,5 @@
-TB-4017,Try a Bus Airways,ATL,FRA,Monday,18:30,174,1444.00
-SL-4367,Scare Airlines,YYC,YEG,Thursday,21:30,50,270.00
+TB-4017,Try a Bus Airways,ATL,FRA,Monday,18:30,173,1444.00
+SL-4367,Scare Airlines,YYC,YEG,Thursday,21:30,49,270.00
 AL-6488,Always Late Airlines,PEK,YVR,Saturday,0:30,292,4710.00
 SL-9996,Scare Airlines,DFW,FRA,Sunday,21:00,255,1188.00
 SW-3491,Sprawl Airways,YVR,PEK,Thursday,8:30,255,1086.00
@@ -7,7 +7,7 @@ SL-9465,Scare Airlines,YEG,CDG,Sunday,7:15,292,1456.00
 SL-2797,Scare Airlines,YOW,CDG,Saturday,23:30,255,1060.00
 MA-6635,Mediocre Airlines,YUL,DFW,Friday,15:00,169,449.00
 CA-1858,Conned Air,YOW,AMS,Tuesday,20:15,292,751.00
-TB-9958,Try a Bus Airways,YYC,YVR,Friday,15:00,50,183.00
+TB-9958,Try a Bus Airways,YYC,YVR,Friday,15:00,48,183.00
 OA-8419,Otto Airlines,FRA,PEK,Friday,16:45,255,474.00
 AL-1806,Always Late Airlines,YVR,DEL,Sunday,15:45,174,1159.00
 GA-5581,Gypped Air,PEK,YVR,Monday,0:30,292,4710.00
@@ -25,7 +25,7 @@ GA-1232,Gypped Air,ATL,DXB,Sunday,5:15,255,1101.00
 TB-7564,Try a Bus Airways,YWG,YEG,Tuesday,5:15,78,442.00
 TB-8016,Try a Bus Airways,YVR,YYZ,Tuesday,9:45,120,351.00
 GA-3170,Gypped Air,YVR,LHR,Monday,17:15,174,899.00
-ST-9539,Scaretransat,YUL,DEL,Friday,21:15,169,896.00
+ST-9539,Scaretransat,YUL,DEL,Friday,21:15,168,896.00
 OA-5374,Otto Airlines,DXB,DFW,Saturday,19:30,255,774.00
 ST-2198,Scaretransat,YEG,PEK,Monday,9:15,174,1052.00
 SL-9998,Scare Airlines,LHR,FRA,Wednesday,11:30,169,119.00
@@ -38,11 +38,11 @@ SW-7615,Sprawl Airways,LHR,DFW,Wednesday,1:45,255,892.00
 AS-6664,AirShaker,YUL,HKG,Sunday,4:30,292,1220.00
 ST-3838,Scaretransat,YUL,HKG,Wednesday,4:30,292,1220.00
 TB-8162,Try a Bus Airways,PEK,DFW,Tuesday,22:45,169,1373.00
-OA-3107,Otto Airlines,CDG,YYZ,Monday,21:30,169,682.00
+OA-3107,Otto Airlines,CDG,YYZ,Monday,21:30,165,682.00
 EC-4888,Error Canada,YWG,YOW,Wednesday,13:15,76,399.00
 VA-2574,Vertical Airways,YWG,YYZ,Friday,19:30,50,175.00
 CA-8844,Conned Air,YEG,CDG,Wednesday,7:15,292,1456.00
-MA-5461,Mediocre Airlines,CDG,YYC,Monday,17:30,255,1267.00
+MA-5461,Mediocre Airlines,CDG,YYC,Monday,17:30,254,1267.00
 AL-3425,Always Late Airlines,PEK,LHR,Thursday,16:30,292,816.00
 OA-3030,Otto Airlines,DXB,CDG,Saturday,21:30,292,600.00
 SW-7911,Sprawl Airways,DEL,ATL,Monday,22:15,174,1308.00
@@ -172,7 +172,7 @@ TB-3569,Try a Bus Airways,YOW,YEG,Sunday,17:15,78,799.00
 VA-2510,Vertical Airways,LHR,YVR,Sunday,7:30,255,948.00
 CA-3565,Conned Air,FRA,CDG,Wednesday,23:45,169,124.00
 AS-9113,AirShaker,DXB,YYC,Tuesday,4:00,255,1134.00
-TB-7994,Try a Bus Airways,CDG,DEL,Friday,0:30,292,602.00
+TB-7994,Try a Bus Airways,CDG,DEL,Friday,0:30,291,602.00
 VA-6531,Vertical Airways,YYZ,ATL,Sunday,17:45,255,675.00
 SL-5007,Scare Airlines,DEL,YYZ,Monday,22:30,292,786.00
 SW-5653,Sprawl Airways,YVR,YWG,Sunday,21:30,76,317.00

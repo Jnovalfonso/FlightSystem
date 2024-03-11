@@ -12,6 +12,8 @@ namespace FlightSystem
             Routing.RegisterRoute(nameof(FindFlight), typeof(FindFlight));
             Routing.RegisterRoute(nameof(DisplayFlight), typeof(DisplayFlight));
             Routing.RegisterRoute(nameof(Reserve), typeof(Reserve));
+            Routing.RegisterRoute(nameof(FindReservation), typeof(FindReservation));
+            Routing.RegisterRoute(nameof(DisplayReservation), typeof(DisplayReservation));
             Routing.RegisterRoute(nameof(AboutUs), typeof(AboutUs));
         }
 

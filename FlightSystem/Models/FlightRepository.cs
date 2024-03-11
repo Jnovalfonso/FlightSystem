@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,8 +9,7 @@ namespace FlightSystem.Models
 {
     public static class FlightRepository
     {
-        //public string currentDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
-        public const string FlightsTextFile = "C:\\Users\\asus\\OneDrive\\Documents\\SAIT\\6. Object-Oriented Programming II\\C#\\Assignments\\FlightSystem\\FlightSystem\\Resources\\Raw\\flights.txt";
+        public static string FlightsTextFile = "C:\\Users\\asus\\OneDrive\\Documents\\SAIT\\6. Object-Oriented Programming II\\C#\\Assignments\\FlightSystem\\FlightSystem\\Resources\\Raw\\flights.txt";
 
         private static List<Flight> _flights;
         private static List<Flight> _foundFlights;
@@ -27,8 +27,10 @@ namespace FlightSystem.Models
                 _foundFlights = new List<Flight>();
                 FillFlightList();
             }
-        }
 
+            Debug.WriteLine(Path.Combine(Environment.CurrentDirectory, @"Raw\", "flights.txt"));
+            Debug.WriteLine(Directory.GetParent(Directory.GetCurrentDirectory()));
+        }
 
         public static void SearchFlight (string departure, string arrival, string day)
         {
@@ -47,9 +49,9 @@ namespace FlightSystem.Models
             {
                 foreach (Flight flight in Flights)
                 {
-                    bool matchDeparture = isDepartureEmpty || flight.DepartureCity.ToLower().Contains(departure.ToLower()) || flight.DepartureCity.ToLower().Contains(AirportRepository.GetAirportCode(departure).ToLower());
-                    bool matchArrival = isArrivalEmpty || flight.ArrivalCity.ToLower().Contains(arrival.ToLower()) || flight.ArrivalCity.ToLower().Contains(AirportRepository.GetAirportCode(arrival).ToLower());
-                    bool matchDay = isDayEmpty || flight.Day.ToLower().Contains(day.ToLower());
+                    bool matchDeparture = isDepartureEmpty || flight.DepartureCity.ToLower() == departure.ToLower() || flight.DepartureCity.ToLower() == AirportRepository.GetAirportCode(departure).ToLower();
+                    bool matchArrival = isArrivalEmpty || flight.ArrivalCity.ToLower() == arrival.ToLower() || flight.ArrivalCity.ToLower() == AirportRepository.GetAirportCode(arrival).ToLower();
+                    bool matchDay = isDayEmpty || flight.Day.ToLower() == day.ToLower();
 
                     if (matchDeparture && matchArrival && matchDay)
                     {
@@ -79,12 +81,12 @@ namespace FlightSystem.Models
 
             catch (Exception ex)
             {
-                _count = -1;
+                Debug.WriteLine(ex.Message);
             }
         }
 
 
-        public static Flight CreateFlightInstance(string line)
+        static Flight CreateFlightInstance(string line)
         {
             string[] parts = line.Split(',');
 
