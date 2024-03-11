@@ -1,11 +1,14 @@
-using FlightSystem;
+namespace FlightApp.Views;
 
-namespace FlightSystem.Views;
-
-public partial class AboutUs : ContentPage
+public partial class AboutUsPage : ContentPage
 {
-	public AboutUs()
+	public AboutUsPage()
 	{
 		InitializeComponent();
 	}
+
+    private void Reuturn_back_from_about_us_page_Clicked(object sender, EventArgs e)
+    {
+		Shell.Current.GoToAsync("..");
+    }
 }
