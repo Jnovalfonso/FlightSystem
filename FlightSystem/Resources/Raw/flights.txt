@@ -763,7 +763,7 @@ ST-7160,Scaretransat,ORD,YVR,Friday,1:15,169,400.00
 MA-4020,Mediocre Airlines,ATL,PEK,Tuesday,14:30,255,768.00
 GA-5028,Gypped Air,YYZ,YOW,Tuesday,21:00,120,210.00
 TB-1762,Try a Bus Airways,CDG,YVR,Wednesday,15:00,174,1385.00
-VA-5895,Vertical Airways,YYC,CDG,Saturday,6:15,169,1013.00
+VA-5895,Vertical Airways,YYC,CDG,Saturday,6:15,168,1013.00
 MA-4634,Mediocre Airlines,YWG,FRA,Friday,18:00,169,1139.00
 MA-5411,Mediocre Airlines,ATL,HND,Monday,5:45,169,1257.00
 AS-5679,AirShaker,AMS,PVG,Thursday,17:00,255,934.00

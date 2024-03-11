@@ -59,6 +59,7 @@
 	  <None Remove="Resources\Images\about.png" />
 	  <None Remove="Resources\Images\flight.png" />
 	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\logo.png" />
 	  <None Remove="Resources\Images\ticket.png" />
 	  <None Remove="Resources\Raw\airports.txt" />
 	  <None Remove="Resources\Raw\reservations.txt" />

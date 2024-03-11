@@ -3,5 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FlightSystem.Views.MainPage">
 
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Welcome to FlyFlights" FontSize="Header" FontAttributes="Bold" TextColor="DarkMagenta" HorizontalOptions="Center" Margin="50"/>
+
+            <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="500"/>
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
