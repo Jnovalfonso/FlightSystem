@@ -9,7 +9,9 @@ namespace FlightSystem.Models
 {
     public static class FlightRepository
     {
-        public static string FlightsTextFile = "C:\\Users\\asus\\OneDrive\\Documents\\SAIT\\6. Object-Oriented Programming II\\C#\\Assignments\\FlightSystem\\FlightSystem\\Resources\\Raw\\flights.txt";
+        static string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\", @"..\", @"..\", @"..\", @"..\", @"Resources\", @"Raw\", @"flights.txt");
+        public static string FlightsTextFile = Path.GetFullPath(path);
+ 
 
         private static List<Flight> _flights;
         private static List<Flight> _foundFlights;
@@ -27,9 +29,6 @@ namespace FlightSystem.Models
                 _foundFlights = new List<Flight>();
                 FillFlightList();
             }
-
-            Debug.WriteLine(Path.Combine(Environment.CurrentDirectory, @"Raw\", "flights.txt"));
-            Debug.WriteLine(Directory.GetParent(Directory.GetCurrentDirectory()));
         }
 
         public static void SearchFlight (string departure, string arrival, string day)

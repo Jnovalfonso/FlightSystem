@@ -10,6 +10,9 @@ namespace FlightSystem.Models
 {
     public static class AirportRepository
     {
+        static string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\", @"..\", @"..\", @"..\", @"..\", @"Resources\", @"Raw\", @"airports.txt");
+        public static string AirportsTextFile = Path.GetFullPath(path);
+
         private static Dictionary<string,string> _airportDictionary;
         private static int _count;
         public static Dictionary<string ,string> AirportDictionary { get {  return _airportDictionary; } set { _airportDictionary = value; } }
@@ -39,10 +42,9 @@ namespace FlightSystem.Models
         }
 
 
-        static async void LoadAirportFile()
+        static void LoadAirportFile()
         {
-            using Stream stream = await FileSystem.OpenAppPackageFileAsync("airports.txt");
-            using StreamReader reader = new StreamReader(stream);
+            using StreamReader reader = new StreamReader(AirportsTextFile);
 
             string line;
             Airport airport = new Airport();

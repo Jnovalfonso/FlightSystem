@@ -10,7 +10,8 @@ namespace FlightSystem.Models
 {
     static class ReservationManager
     {
-        const string ReservationsTextFile = "C:\\Users\\asus\\OneDrive\\Documents\\SAIT\\6. Object-Oriented Programming II\\C#\\Assignments\\FlightSystem\\FlightSystem\\Resources\\Raw\\reservations.txt";
+        static string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\", @"..\", @"..\", @"..\", @"..\", @"Resources\", @"Raw\", @"reservations.txt");
+        public static string ReservationsTextFile = Path.GetFullPath(path);
         static List<string> existingCodes = new List<string>();
         public static List<Reservation> reservations = new List<Reservation>();
         public static List<Reservation> foundReservations = new List<Reservation>();
@@ -53,7 +54,6 @@ namespace FlightSystem.Models
 
                 Reservation reservation = new Reservation(reservationCode, name, citizenship, isActive, flight);
 
-                Debug.WriteLine($"{reservationCode},{name},{citizenship},{isActive},{flight.FlightCode}");
                 return reservation;
             }
         }
@@ -85,7 +85,7 @@ namespace FlightSystem.Models
 
             while (code.Length != 5)
             {
-                if (code.Length < 2) 
+                if (code.Length < 1) 
                 {
                     code += GetLetter();
                 }
