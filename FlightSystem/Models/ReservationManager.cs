@@ -85,7 +85,7 @@ namespace FlightSystem.Models
 
             while (code.Length != 5)
             {
-                if (code.Length < 2) 
+                if (code.Length < 1) 
                 {
                     code += GetLetter();
                 }
